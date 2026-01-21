@@ -38,7 +38,7 @@ async function Search(){
 }
 
 async function locationAPICall(cityName){
-    let res=await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${openWeather_apiKey}`);
+    let res=await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${openWeather_apiKey}`);
     let data = await res.json();
     if(!data[0]){
         const locationData={locFound: false};
